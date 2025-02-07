@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        background: lightgray;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Dynamic list Creation based on cars(Array)</h2>
+
+    <ul id="carList"></ul>
+
+    <h2>Car List (Using map())</h2>
+    <ul id="carListMap"></ul>
+
+    <script>
+      // Step 1: Create an array of car names
+      let cars = [
+        "Audi",
+        "Lamborghini",
+        "Buggati",
+        "Rolls Royce",
+        "Jaguar",
+        "Porsche",
+      ];
+
+      // Step 2: Display car names using a FOR LOOP
+      let carList = document.getElementById("carList");
+      for (let i = 0; i < cars.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = cars[i];
+        carList.appendChild(li);
+      }
+
+      // Step 3: Display car names using map()
+      let carListMap = document.getElementById("carListMap");
+      cars.map((car) => {
+        let li = document.createElement("li");
+        li.textContent = car;
+        carListMap.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

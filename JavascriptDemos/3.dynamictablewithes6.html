@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Product Table (ES6)</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+      th {
+        background-color: #007bff;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .out-of-stock {
+        background-color: #c9f311;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Product List (ES6 Version)</h2>
+    <table id="productTable">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Category</th>
+          <th>Stock</th>
+          <th>Price ($)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      // Step 1: Create an array of product objects
+      const products = [
+        { name: "Laptop", category: "Electronics", stock: 10, price: 1200 },
+        { name: "Smartphone", category: "Electronics", stock: 5, price: 800 },
+        { name: "Desk Chair", category: "Furniture", stock: 0, price: 150 },
+        {
+          name: "Bluetooth Speaker",
+          category: "Electronics",
+          stock: 20,
+          price: 100,
+        },
+        { name: "Notebook", category: "Stationery", stock: 50, price: 5 },
+      ];
+
+      // Step 2: Select the table body
+      const tableBody = document.querySelector("#productTable tbody");
+
+      // Step 3: Use map() to create table rows dynamically
+      const rows = products
+        .map(
+          ({ name, category, stock, price }) => `
+            <tr class="${stock === 0 ? "out-of-stock" : ""}">
+                <td>${name}</td>
+                <td>${category}</td>
+                <td>${stock > 0 ? stock : "Out of Stock"}</td>
+                <td>$${price.toFixed(2)}</td>
+            </tr>
+        `
+        )
+        .join(""); // Convert array to a single string
+
+      // Step 4: Insert rows into table
+      tableBody.innerHTML = rows;
+    </script>
+  </body>
+</html>
