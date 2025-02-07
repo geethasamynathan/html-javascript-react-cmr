@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Ride</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+        }
+
+        nav {
+            background: #333;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .content {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .image {
+            width: 50%;
+            text-align: center;
+        }
+
+        .image img {
+            width: 100%;
+            max-height: 300px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cycle Ride Adventure</h1>
+    </header>
+    
+    <nav>
+        <a href="#kids">Kids Cycle</a>
+        <a href="#adult">Adult Cycle</a>
+        <a href="#gear">Gear Cycle</a>
+    </nav>
+    
+    <div class="container" id="kids">
+        <div class="content">
+            <h2>Kids Cycle</h2>
+            <p>Perfect for young riders, lightweight, and colorful. Safety ensured with training wheels.</p>
+        </div>
+        <div class="image">
+            <img src="kids-cycle.jpg" alt="Kids Cycle">
+        </div>
+    </div>
+    
+    <div class="container" id="adult">
+        <div class="content">
+            <h2>Adult Cycle</h2>
+            <p>Comfortable and durable for long rides. Ideal for exercise and city commuting.</p>
+        </div>
+        <div class="image">
+            <img src="adult-cycle.jpg" alt="Adult Cycle">
+        </div>
+    </div>
+    
+    <div class="container" id="gear">
+        <div class="content">
+            <h2>Gear Cycle</h2>
+            <p>Designed for speed and efficiency. Perfect for mountain biking and long-distance cycling.</p>
+        </div>
+        <div class="image">
+            <img src="gear-cycle.jpg" alt="Gear Cycle">
+        </div>
+    </div>
+    
+    <footer>
+        <p>Contact us: info@cycleride.com | Follow us on social media</p>
+    </footer>
+</body>
+</html>

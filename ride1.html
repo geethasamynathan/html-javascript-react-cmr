@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Ride</title>
+    <style>
+        /* General Reset and Base Styles */
+        * {
+            margin: 0; /* Removes default margins */
+            padding: 0; /* Removes default padding */
+            box-sizing: border-box; /* Ensures padding/borders don't affect element size */
+            font-family: Arial, sans-serif; /* Sets a readable font */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column; /* Aligns elements in a vertical stack */
+            align-items: center; /* Centers the content horizontally */
+            background-color: #f4f4f4; /* Light background for contrast */
+        }
+
+        /* Header Styling */
+        header {
+            background: #4CAF50; /* Green background */
+            color: white; /* White text for contrast */
+            text-align: center; /* Centers text */
+            padding: 20px; /* Adds spacing inside the header */
+            width: 100%; /* Ensures full width */
+            font-size: 24px; /* Increases text size */
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #333; /* Dark background */
+            width: 100%;
+            padding: 15px 0;
+            text-align: center; /* Centers navigation links */
+        }
+
+        nav a {
+            color: white; /* White text for visibility */
+            text-decoration: none; /* Removes underline */
+            padding: 12px 20px;
+            margin: 0 15px;
+            font-size: 18px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background: #575757; /* Changes background on hover */
+            border-radius: 5px;
+        }
+
+        /* Main Section Container */
+        .container {
+            display: flex;
+            width: 80%;
+            margin: 30px auto; /* Centers the content */
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        }
+
+        .content {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .image {
+            width: 50%;
+            text-align: center;
+        }
+
+        .image img {
+            width: 100%;
+            max-height: 300px;
+            border-radius: 10px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cycle Ride Adventure</h1>
+    </header>
+    
+    <nav>
+        <a href="#kids">Kids Cycle</a>
+        <a href="#adult">Adult Cycle</a>
+        <a href="#gear">Gear Cycle</a>
+    </nav>
+    
+    <div class="container" id="kids">
+        <div class="content">
+            <h2>Kids Cycle</h2>
+            <p>Perfect for young riders, lightweight, and colorful. Comes with training wheels for extra safety. These cycles are ideal for beginners.</p>
+            <ul>
+                <li>Age Group: 3-8 years</li>
+            <img src="kids-cycle.jpg" alt="Kids Cycle">
+        </div>
+    </div>
+    
+    <div class="container" id="adult">
+        <div class="content">
+            <h2>Adult Cycle</h2>
+            <p>Comfortable and durable for long rides. Ideal for exercise and city commuting.</p>
+        </div>
+        <div class="image">
+            <img src="adult-cycle.jpg" alt="Adult Cycle">
+        </div>
+    </div>
+    
+    <div class="container" id="gear">
+        <div class="content">
+            <h2>Gear Cycle</h2>
+            <p>Designed for speed and efficiency. Perfect for mountain biking and long-distance cycling.</p>
+        </div>
+        <div class="image">
+            <img src="gear-cycle.jpg" alt="Gear Cycle">
+        </div>
+    </div>
+    
+    <footer>
+        <p>Contact us: info@cycleride.com | Follow us on social media</p>
+    </footer>
+</body>
+</html>
