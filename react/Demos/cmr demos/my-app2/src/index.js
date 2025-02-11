@@ -1,13 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import VariableDataBinding from "./components/VariableDataBinding1";
+import ReactComponentExample from "./components/ReactComponentExample";
+import EventBindingExample from "./components/EventBindingExample";
+import EventBindinExample2 from "./components/EventBindingExample2";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <EventBindinExample2 />
+    {/* <EventBindingExample /> */}
+
+    {/* <ReactComponentExample /> */}
+    {/* <VariableDataBinding /> */}
+    {/* <App /> */}
   </React.StrictMode>
 );
 
